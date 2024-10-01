@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BJDドールのための高品質なお洋服を販売しています。ユニークでスタイリッシュな商品をお届けします。">
+    <meta name="keywords" content="BJDドール, お洋服, ドール服, ファッション, ハンドメイド">
+    <title>RosenliaDoll - ホーム</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>☆☆RosenliaDoll☆☆</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="products.html">商品一覧</a></li>
+                <li><a href="about.html">会社概要</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>ようこそ</h2>
+            <p>BJDドールのための素敵なお洋服をご紹介します。高品質でユニークなデザインをお楽しみください。</p>
+        </section>
+
+        <section id="profile">
+            <h2>プロフィール</h2>
+            <div id="profile-display">
+                <img id="profile-image" src="default-profile.png" alt="プロフィール画像" width="150" height="150">
+                <p>名前: <span id="display-name"></span></p>
+                <p>好きなドールタイプ: <span id="display-doll-type"></span></p>
+                <button id="edit-profile">プロフィール編集</button>
+            </div>
+            <form id="profile-form" style="display: none;">
+                <label for="profile-image-upload">プロフィール画像:</label>
+                <input type="file" id="profile-image-upload" accept="image/*">
+                <label for="name">名前:</label>
+                <input type="text" id="name" required>
+                <label for="doll-type">好きなドールタイプ:</label>
+                <input type="text" id="doll-type" required>
+                <button type="submit">保存</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://x.com/Rosenlia_doll" target="_blank" rel="noopener noreferrer">
+                <img src="./images/twitter.png" alt="Twitter" class="social-icon">
+            </a>
+        </div>
+        <p>&copy; 2023 BJDドールのお洋服ショップ. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
