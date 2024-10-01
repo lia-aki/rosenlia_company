@@ -3,55 +3,64 @@ const products = [
         image: "./images/imag_1.jpg",
         name: "エメラルドの扉",
         description: "MDD・SDM通用 ドール服 ワンピース 8点セット。",
-        price: "¥12,800"
+        price: "¥12,800",
+        boothUrl: "https://rosenliadoll.booth.pm/items/5889200" // 各商品のBoothページURLを追加
     },
     {
         image: "./images/imag_1.jpg",
         name: "エメラルドの扉",
         description: "MDD・SDM通用 ドール服 ワンピース 8点セット。",
-        price: "¥12,800"
+        price: "¥12,800",
+        boothUrl: "https://rosenliadoll.booth.pm/items/5889200" // 各商品のBoothページURLを追加
     },
     {
         image: "./images/imag_1.jpg",
         name: "エメラルドの扉",
         description: "MDD・SDM通用 ドール服 ワンピース 8点セット。",
-        price: "¥12,800"
+        price: "¥12,800",
+        boothUrl: "https://rosenliadoll.booth.pm/items/5889200" // 各商品のBoothページURLを追加
     },
     {
         image: "./images/imag_1.jpg",
         name: "エメラルドの扉",
         description: "MDD・SDM通用 ドール服 ワンピース 8点セット。",
-        price: "¥12,800"
+        price: "¥12,800",
+        boothUrl: "https://rosenliadoll.booth.pm/items/5889200" // 各商品のBoothページURLを追加
     },
     {
         image: "./images/imag_1.jpg",
         name: "エメラルドの扉",
         description: "MDD・SDM通用 ドール服 ワンピース 8点セット。",
-        price: "¥12,800"
+        price: "¥12,800",
+        boothUrl: "https://rosenliadoll.booth.pm/items/5889200" // 各商品のBoothページURLを追加
     },
     {
         image: "./images/imag_1.jpg",
         name: "エメラルドの扉",
         description: "MDD・SDM通用 ドール服 ワンピース 8点セット。",
-        price: "¥12,800"
+        price: "¥12,800",
+        boothUrl: "https://rosenliadoll.booth.pm/items/5889200" // 各商品のBoothページURLを追加
     },
     {
         image: "./images/imag_1.jpg",
         name: "エメラルドの扉",
         description: "MDD・SDM通用 ドール服 ワンピース 8点セット。",
-        price: "¥12,800"
+        price: "¥12,800",
+        boothUrl: "https://rosenliadoll.booth.pm/items/5889200" // 各商品のBoothページURLを追加
     },
     {
         image: "./images/imag_1.jpg",
         name: "エメラルドの扉",
         description: "MDD・SDM通用 ドール服 ワンピース 8点セット。",
-        price: "¥12,800"
+        price: "¥12,800",
+        boothUrl: "https://rosenliadoll.booth.pm/items/5889200" // 各商品のBoothページURLを追加
     },
     {
         image: "./images/imag_1.jpg",
         name: "エメラルドの扉",
         description: "MDD・SDM通用 ドール服 ワンピース 8点セット。",
-        price: "¥12,800"
+        price: "¥12,800",
+        boothUrl: "https://rosenliadoll.booth.pm/items/5889200" // 各商品のBoothページURLを追加
     },
 ];
 
@@ -74,6 +83,7 @@ function displayProducts(page) {
             <h3>${product.name}</h3>
             <p>${product.description}</p>
             <p class="price">${product.price}</p>
+            <a href="${product.boothUrl}" target="_blank" rel="noopener noreferrer" class="booth-button product-booth-button">Boothで見る</a>
         `;
         productGrid.appendChild(productItem);
     });

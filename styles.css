@@ -4,34 +4,37 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #fff5f5;
+    background-color: #f0e6ff; /* 浅い紫色の背景 */
     color: #4a4a4a;
+    font-size: 1rem;
 }
 
 /* ヘッダーのスタイル */
 header {
-    background-color: #ffd1dc;
-    padding: 1rem;
+    background-color: #d8c8ff; /* より濃い紫色 */
+    padding: 0.5rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 h1 {
-    color: #ff69b4;
+    color: #6a0dad; /* 濃い紫色 */
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 /* ナビゲーションのスタイル */
 nav ul {
     list-style-type: none;
     padding: 0;
-    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap; /* 折り返しを防ぐ */
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 nav ul li a {
@@ -39,10 +42,11 @@ nav ul li a {
     color: #4a4a4a;
     font-weight: bold;
     transition: color 0.3s ease;
+    font-size: 0.9rem; /* フォントサイズを少し小さく */
 }
 
 nav ul li a:hover {
-    color: #ff69b4;
+    color: #6a0dad; /* 濃い紫色 */
 }
 
 /* メインコンテンツのスタイル */
@@ -61,14 +65,14 @@ section {
 }
 
 h2 {
-    color: #ff69b4;
-    border-bottom: 2px solid #ffd1dc;
+    color: #6a0dad; /* 濃い紫色 */
+    border-bottom: 2px solid #d8c8ff;
     padding-bottom: 0.5rem;
 }
 
 /* フッターのスタイル */
 footer {
-    background-color: #ffd1dc;
+    background-color: #d8c8ff; /* より濃い紫色 */
     color: #4a4a4a;
     text-align: center;
     padding: 1rem;
@@ -106,7 +110,7 @@ footer {
 /* Boothボタンのスタイル */
 .booth-button {
     display: inline-block;
-    background-color: #ff69b4;
+    background-color: #6a0dad; /* 濃い紫色 */
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -116,7 +120,7 @@ footer {
 }
 
 .booth-button:hover {
-    background-color: #ff1493;
+    background-color: #8a2be2; /* ホバー時はより明るい紫色 */
 }
 
 /* プロフィールセクションのスタイル */
@@ -153,7 +157,7 @@ footer {
 
 #profile-form button,
 #edit-profile {
-    background-color: #ff69b4;
+    background-color: #6a0dad; /* 濃い紫色 */
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -164,32 +168,56 @@ footer {
 
 #profile-form button:hover,
 #edit-profile:hover {
-    background-color: #ff1493;
+    background-color: #8a2be2; /* ホバー時はより明るい紫色 */
 }
 
 #profile-image-upload {
     margin-bottom: 1rem;
 }
 
-/* レスポンシブデザイン */
+/* レスポンシブデザインの改善 */
+@media (max-width: 1024px) {
+    main {
+        padding: 1rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
 @media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
     h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
-    .social-icons a {
-        font-size: 1.2rem;
+    nav ul {
+        justify-content: space-around;
+    }
+
+    nav ul li {
         margin: 0 5px;
     }
 
-    .twitter-icon {
-        width: 20px; /* モバイル用にサイズを少し小さく */
-        height: 20px;
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .product-image {
+        height: 150px;
+    }
+
+    .social-icons a {
+        margin: 0 5px;
+    }
+
+    .social-icon {
+        width: 24px;
+        height: 24px;
     }
 
     #profile-image {
@@ -197,9 +225,186 @@ footer {
         height: 100px;
     }
 
+    #pagination button {
+        padding: 0.3rem 0.7rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    header {
+        padding: 0.3rem 0.1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0.2rem 0.3rem;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.4rem;
+    }
+
+    main {
+        padding: 1rem 0.5rem;
+    }
+
+    section {
+        padding: 1rem 0.5rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .product-image {
+        height: 150px;
+    }
+
+    .product-item h3 {
+        font-size: 1rem;
+    }
+
+    .product-item p {
+        font-size: 0.9rem;
+    }
+
+    .booth-button {
+        display: block;
+        text-align: center;
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    #profile-form {
+        width: 100%;
+    }
+
+    #profile-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    #pagination button {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.8rem;
+        margin: 0 0.2rem;
+    }
+
     .social-icon {
         width: 24px;
         height: 24px;
+    }
+
+    footer {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* 320px以下の超小型画面用 */
+@media (max-width: 320px) {
+    html {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    nav ul li {
+        margin: 0.1rem 0.2rem;
+    }
+
+    nav ul li a {
+        font-size: 0.7rem;
+        padding: 0.1rem 0.3rem;
+    }
+
+    .product-image {
+        height: 120px;
+    }
+
+    .booth-button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    #profile-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    #pagination button {
+        padding: 0.1rem 0.4rem;
+        font-size: 0.7rem;
+        margin: 0 0.1rem;
+    }
+
+    .social-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* タッチデバイス用の調整 */
+@media (hover: none) {
+    nav ul li a:hover,
+    .social-icon:hover,
+    .booth-button:hover,
+    #profile-form button:hover,
+    #edit-profile:hover,
+    #pagination button:hover {
+        opacity: 1;
+    }
+
+    nav ul li a:active,
+    .social-icon:active,
+    .booth-button:active,
+    #profile-form button:active,
+    #edit-profile:active,
+    #pagination button:active {
+        opacity: 0.7;
+    }
+}
+
+/* フォントサイズの調整 */
+html {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 12px;
     }
 }
 
@@ -229,7 +434,7 @@ footer {
 
 .product-item h3 {
     margin: 0.5rem 0;
-    color: #ff69b4;
+    color: #6a0dad; /* 濃い紫色 */
 }
 
 .product-item p {
@@ -252,15 +457,15 @@ footer {
     margin: 0 0.5rem;
     padding: 0.5rem 1rem;
     background-color: #fff;
-    border: 1px solid #ff69b4;
-    color: #ff69b4;
+    border: 1px solid #6a0dad;
+    color: #6a0dad;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #pagination button:hover,
 #pagination button.active {
-    background-color: #ff69b4;
+    background-color: #6a0dad;
     color: #fff;
 }
 
@@ -268,5 +473,56 @@ footer {
 @media (max-width: 768px) {
     .product-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+/* お知らせパーツのスタイル */
+#announcement {
+    background-color: #e6d0ff;
+    color: #4a4a4a;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#announcement p {
+    margin: 0;
+}
+
+/* アニメーションの一時停止 */
+#announcement:hover #announcement-content {
+    animation-play-state: paused;
+}
+
+/* 商品ごとのBoothボタンのスタイル */
+.product-booth-button {
+    display: inline-block;
+    background-color: #6a0dad;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.product-booth-button:hover {
+    background-color: #8a2be2;
+}
+
+/* レスポンシブデザインの調整 */
+@media (max-width: 480px) {
+    .product-booth-button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .product-booth-button {
+        padding: 4px 8px;
+        font-size: 0.7rem;
     }
 }

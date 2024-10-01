@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // ナビゲーションのスムーズスクロールを削除
-
     // 簡単な挨拶メッセージ
     const currentHour = new Date().getHours();
     let greeting;
