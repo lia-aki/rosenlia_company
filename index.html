@@ -34,19 +34,21 @@
         <section id="profile">
             <h2>プロフィール</h2>
             <div id="profile-display">
-                <img id="profile-image" src="default-profile.png" alt="プロフィール画像" width="150" height="150">
-                <p>名前: <span id="display-name"></span></p>
-                <p>好きなドールタイプ: <span id="display-doll-type"></span></p>
+                <img id="profile-image" src="./images/imag_1.jpg" alt="プロフィール画像" width="150" height="150">
+                <p>名前: RosenliaDoll</p>
+                <p>好きなドールタイプ: MDD</p>
                 <!-- <button id="edit-profile">プロフィール編集</button>-->
             </div>
             <form id="profile-form" style="display: none;">
-                <label for="profile-image-upload">プロフィール画像:</label>
+                <label for="profile-image-upload">プロフィール画像:
+                    <img id="profile-image" alt="RosenliaDoll プロフィール画像" width="150" height="150">
+                </label>
                 <input type="file" id="profile-image-upload" accept="image/*">
                 <label for="name">名前:</label>
                 <input type="text" id="name" required>
                 <label for="doll-type">好きなドールタイプ:</label>
                 <input type="text" id="doll-type" required>
-                <button type="submit">保存</button>
+                <!--<button type="submit">保存</button>-->
             </form>
         </section>
     </main>

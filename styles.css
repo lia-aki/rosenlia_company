@@ -417,6 +417,9 @@ html {
 }
 
 .product-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* 高さを100%に設定 */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -424,12 +427,21 @@ html {
     text-align: center;
 }
 
+.product-image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 300px; /* 高さを増やす */
+}
+
 .product-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 1rem;
+    max-width: 100%;
+    max-height: 300px; /* 最大高さを増やす */
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 .product-item h3 {
@@ -473,6 +485,24 @@ html {
 @media (max-width: 768px) {
     .product-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .product-image-container {
+        height: 250px;
+    }
+
+    .product-image {
+        max-height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-image-container {
+        height: 200px;
+    }
+
+    .product-image {
+        max-height: 200px;
     }
 }
 

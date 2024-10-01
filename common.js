@@ -28,6 +28,13 @@ function createCommonElements() {
     }
     document.body.appendChild(main);
 
+    // プロフィール画像を設定
+    const profileImage = document.getElementById('profile-image');
+    if (profileImage) {
+        profileImage.src = './images/aki.png';
+        profileImage.alt = 'RosenliaDoll プロフィール画像';
+    }
+
     // フッターを生成
     const footer = document.createElement('footer');
     footer.innerHTML = `

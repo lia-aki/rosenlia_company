@@ -79,7 +79,9 @@ function displayProducts(page) {
         const productItem = document.createElement('div');
         productItem.className = 'product-item';
         productItem.innerHTML = `
-            <img src="${product.image}" alt="${product.name}" class="product-image">
+            <div class="product-image-container">
+                <img src="${product.image}" alt="${product.name}" class="product-image">
+            </div>
             <h3>${product.name}</h3>
             <p>${product.description}</p>
             <p class="price">${product.price}</p>
